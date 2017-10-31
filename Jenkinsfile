@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('build and test apps') {
+    stage('Build and Test Apps') {
       parallel {
         stage('app1') {
           steps {
