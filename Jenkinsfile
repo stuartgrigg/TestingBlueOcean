@@ -17,5 +17,10 @@ pipeline {
         }
       }
     }
+    stage('Silly Stuff') {
+      steps {
+        sh 'echo "qwertyuiop"'
+      }
+    }
   }
 }
