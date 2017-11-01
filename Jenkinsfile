@@ -19,7 +19,8 @@ pipeline {
     }
     stage('Silly Stuff') {
       steps {
-        sh 'echo "qwertyuiop"'
+        sh '''echo "qwertyuiop"
+pwd'''
         sh 'git status'
       }
     }
