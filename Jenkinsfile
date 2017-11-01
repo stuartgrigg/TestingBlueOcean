@@ -20,7 +20,7 @@ pipeline {
     stage('Silly Stuff') {
       steps {
         sh '''echo "qwertyuiop"
-pwd'''
+echo $BRANCH_NAME'''
         sh 'git status'
       }
     }
