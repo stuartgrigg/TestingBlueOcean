@@ -20,6 +20,7 @@ pipeline {
     stage('Silly Stuff') {
       steps {
         sh 'echo "qwertyuiop"'
+        sh 'git rev-parse --abbrev-ref HEAD'
       }
     }
   }
