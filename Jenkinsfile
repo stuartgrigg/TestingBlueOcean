@@ -27,7 +27,7 @@ echo $BRANCH_NAME'''
     stage('Gitty thing') {
       steps {
         sh '''CURRENT_REVISION="$(git rev-parse HEAD)"
-MASTER_REVISION="$(git rev-parse origin/master)"
+MASTER_REVISION="$(git rev-parse master)"
 git merge-base CURRENT_REVISION MASTER_REVISION'''
       }
     }
