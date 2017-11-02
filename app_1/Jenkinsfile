@@ -1,0 +1,18 @@
+pipeline {
+  agent any
+  stages {
+    stage('Build and Test App 1') {
+        steps {
+          sh 'docker build -t app_1 app_1'
+          sh 'docker run app_1'
+        }
+    }
+    stage('Silly Stuff') {
+      steps {
+        sh 'echo "qwertyuiop"'
+        sh 'echo $BRANCH_NAME'
+        sh 'git status'
+      }
+    }
+  }
+}
