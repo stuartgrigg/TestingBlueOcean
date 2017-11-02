@@ -28,7 +28,7 @@ echo $BRANCH_NAME'''
       steps {
         sh '''CURRENT_REVISION="$(git rev-parse HEAD)"
 MASTER_REVISION="$(git rev-parse origin/master)"
-git merge-base CURRENT_REVISION MASTER_REVISION'''
+git merge-base $CURRENT_REVISION $MASTER_REVISION'''
       }
     }
   }
